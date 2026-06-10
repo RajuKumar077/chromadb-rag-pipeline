@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Chromadb-rag-pipeline</h1>
   <p align="center">
-    A complete, hands-on RAG system — PDF ingestion → ChromaDB → Answer Generation → Evaluation → Prompt Fine-Tuning
+    A complete, hands-on RAG system ► PDF ingestion → ChromaDB → Answer Generation → Evaluation → Prompt Fine-Tuning
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python" />
@@ -81,20 +81,20 @@ Prompt Fine-Tuning  ────────────────────
 | Visualisation | `plotly` | Interactive charts throughout |
 | Evaluation | Cosine similarity | Measure generated vs expected answer quality |
 
-> 💡 **Key insight:** ChromaDB is only the *storage layer* — it doesn't create embeddings. LangChain does the chunking, SentenceTransformer creates the vectors, ChromaDB stores and retrieves them.
+> 💡 **Key insight:** ChromaDB is only the *storage layer* ► it doesn't create embeddings. LangChain does the chunking, SentenceTransformer creates the vectors, ChromaDB stores and retrieves them.
 
 ---
 
 ## 🚀 Quick Start
 
-### ▶️ Option A — Google Colab (Recommended, no setup needed)
+### ▶️ Option A ► Google Colab (Recommended, no setup needed)
 
 1. Open [Google Colab](https://colab.research.google.com/)
 2. Upload `ChromaDB_RAG_Complete.ipynb`
 3. Upload your PDF when prompted in **Section 3**
 4. `Runtime → Run All`
 
-### 💻 Option B — Run Locally
+### 💻 Option B ► Run Locally
 
 ```bash
 git clone https://github.com/RajuKumar077/chromadb-rag-pipeline.git
@@ -131,16 +131,16 @@ jupyter notebook ChromaDB_RAG_Complete.ipynb
 ## 🔑 Core Concepts Explained
 
 **Why chunking?**
-Embedding models have a token limit. Splitting into chunks lets us embed focused meaning rather than entire pages — better retrieval accuracy.
+Embedding models have a token limit. Splitting into chunks lets us embed focused meaning rather than entire pages ► better retrieval accuracy.
 
 **What does ChromaDB actually do?**
 ChromaDB is *only* the storage and search layer. You generate vectors outside it (via SentenceTransformer), then ChromaDB indexes them and returns the closest ones to a query vector.
 
 **Why RAG over plain LLM?**
-A plain LLM answers from training data only. RAG injects your document's actual content into the prompt — the LLM answers from *your data*, reducing hallucination significantly.
+A plain LLM answers from training data only. RAG injects your document's actual content into the prompt ► the LLM answers from *your data*, reducing hallucination significantly.
 
 **What is "prompt fine-tuning" here?**
-Not weight updates — we compare different instruction styles in the prompt template and measure which produces the highest semantic similarity to a reference answer. It's **prompt engineering as a measurable optimisation**.
+Not weight updates ► we compare different instruction styles in the prompt template and measure which produces the highest semantic similarity to a reference answer. It's **prompt engineering as a measurable optimisation**.
 
 ---
 
@@ -162,16 +162,16 @@ Not weight updates — we compare different instruction styles in the prompt tem
 
 - [ ] Swap `distilgpt2` → `Phi-3-mini-4k-instruct` or call **OpenAI / Anthropic API**
 - [ ] Use `chromadb.PersistentClient(path="./chroma_db")` for disk persistence across sessions
-- [ ] Add **metadata filtering** — query by page, section, or source file
+- [ ] Add **metadata filtering** ► query by page, section, or source file
 - [ ] Integrate [**Ragas**](https://github.com/explodinggradients/ragas) for faithfulness, context precision, and answer relevance metrics
-- [ ] Add **hybrid search** — dense embedding retrieval + BM25 sparse retrieval
+- [ ] Add **hybrid search** ► dense embedding retrieval + BM25 sparse retrieval
 - [ ] Build a **Streamlit / Gradio** frontend on top
 
 ---
 
 ## 👤 Author
 
-**Raju Kumar** — AI/ML Engineer  
+**Raju Kumar** ► AI/ML Engineer  
 🌐 [therajukumar.vercel.app](https://therajukumar.vercel.app) &nbsp;|&nbsp;
 💼 [linkedin.com/in/raju-kumar7388](https://linkedin.com/in/raju-kumar7388) &nbsp;|&nbsp;
 🐙 [github.com/RajuKumar077](https://github.com/RajuKumar077)
@@ -180,5 +180,5 @@ Not weight updates — we compare different instruction styles in the prompt tem
 
 ## ⭐ Found this useful?
 
-Star the repo — it helps others find it.
+Star the repo ► it helps others find it.
 And watch the [YouTube playlist](https://youtube.com/playlist?list=PLEYSwx3duQ2DGcKullDTbHOPKuNsr9yvC&si=0tUez1x9_XjVVTj1) that this project is built on top of.
